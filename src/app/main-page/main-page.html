@@ -6,5 +6,13 @@
         <p>{{post.name}}</p>
         <img src="{{post.image}}" alt="">
         <p>{{post.like}}</p>
+        @if (post.isLiked) {
+            <img (click)="changeLike(post)" class="heart" src="assets/img/heart-red.png" alt="">
+        }@else {
+            <img (click)="changeLike(post)" class="heart" src="assets/img/heart-black.png" alt="">
+        }
     </div>
+
 }
+
+<a routerLink="legal">Legal</a>
